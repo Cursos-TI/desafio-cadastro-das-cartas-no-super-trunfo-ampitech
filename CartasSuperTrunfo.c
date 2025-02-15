@@ -2,21 +2,43 @@
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+    // Definindo as variáveis para armazenar os atributos da cidade
+    int codigo;
+    char nome[50];
+    int populacao;
+    float area;
+    float pib;
+    int pontosTuristicos;
+
+    // Cadastro das Cartas
+    printf("Informe o código da cidade: ");
+    scanf("%d", &codigo);
     
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+    printf("Informe o nome da cidade: ");
+    scanf(" %[^\n]s", nome); // A captura do nome pode ter espaços, por isso o uso de %[^\n]
     
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    printf("Informe a população da cidade: ");
+    scanf("%d", &populacao);
+    
+    printf("Informe a área da cidade (em km²): ");
+    scanf("%f", &area);
+    
+    printf("Informe o PIB da cidade (em bilhões): ");
+    scanf("%f", &pib);
+    
+    printf("Informe o número de pontos turísticos da cidade: ");
+    scanf("%d", &pontosTuristicos);
+
+    // Exibição dos Dados das Cartas
+    printf("\n--- Dados da Carta da Cidade ---\n");
+    printf("Código: %d\n", codigo);
+    printf("Nome: %s\n", nome);
+    printf("População: %d\n", populacao);
+    printf("Área: %.2f km²\n", area);
+    printf("PIB: %.2f bilhões\n", pib);
+    printf("Pontos Turísticos: %d\n", pontosTuristicos);
 
     return 0;
 }
